@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Classname:</strong>
+  <%= @classtype.classname %>
+</p>
+
+<p>
+  <strong>Classid:</strong>
+  <%= @classtype.classid %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @classtype.cost %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @classtype.category %>
+</p>
+
+<p>
+  <strong>Classtime:</strong>
+  <%= @classtype.classtime %>
+</p>
+
+<%= link_to 'Edit', edit_classtype_path(@classtype) %> |
+<%= link_to 'Back', classtypes_path %>

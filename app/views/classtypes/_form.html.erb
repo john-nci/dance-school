@@ -1,0 +1,42 @@
+<%= form_with(model: classtype, local: true) do |form| %>
+  <% if classtype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(classtype.errors.count, "error") %> prohibited this classtype from being saved:</h2>
+
+      <ul>
+      <% classtype.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :classname %>
+    <%= form.text_field :classname, id: :classtype_classname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :classid %>
+    <%= form.text_field :classid, id: :classtype_classid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cost %>
+    <%= form.text_field :cost, id: :classtype_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category, id: :classtype_category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :classtime %>
+    <%= form.datetime_select :classtime, id: :classtype_classtime %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
